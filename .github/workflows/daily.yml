@@ -1,0 +1,18 @@
+name: daily-collab-scan
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:  # manual trigger button
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -r requirements.txt
+      - run: python collab.py
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
+          MAIL_TO:    ${{ secrets.MAIL_TO }
