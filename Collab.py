@@ -23,3 +23,6 @@ KEYWORDS = [
     "gu.*spongebob", "gu.*batman", "gu.*spotify", "gu.*movie",
     "gu.*omiyage", "gu.*ug.*undercover"
 ]
+]
+
+ALERT_URL = "https://www.google.com/alerts/feeds/14515182875956901327/7712553403289996449"
