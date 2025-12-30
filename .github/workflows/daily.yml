@@ -15,4 +15,4 @@ jobs:
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
-          MAIL_TO:    ${{ secrets.MAIL_TO }
+          MAIL_TO:    ${{ secrets.MAIL_TO }}
